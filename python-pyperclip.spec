@@ -3,13 +3,14 @@
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-pyperclip.spec)
 
 Summary:	A cross-platform clipboard module for Python
 Summary(pl.UTF-8):	Wieloplatformowy moduł schowka dla Pythona
 Name:		python-pyperclip
+# keep 1.8.x here - despite python2 classifiers, 1.9.0 uses f-strings, which require python 3.6+
 Version:	1.8.2
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/p/pyperclip/pyperclip-%{version}.tar.gz
